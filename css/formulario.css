@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+:root {
+    /* Fondos */
+    --bg-main: #0f172a;
+    --bg-card: #390f61;
+    --bg-hover: #7aeaee;
+
+    /* Textos */
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+
+    /* Acentos */
+    --accent-primary: #7f02c7;
+    --accent-light: #7aeaee;
+
+    /* Estilos de caja */
+    --border-color: #334155;
+    --border-radius: 12px;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+
+    /* Tipografía */
+    --font-main: 'Arial', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "LimeLight", serif;
+}
+
+header {
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: rgb(196, 242, 250);
+    font-size: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgba(10, 92, 139, 0.386);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 600;
+}
+
+header .logo:hover {
+    color: rgb(0, 0, 0);
+    background: #ffffff9b;
+    transition: 1s;
+}
+
+header .navbar {
+    position: relative;
+    display: flex;
+}
+
+header .navbar li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navbar li a {
+    text-decoration: none;
+    color: rgb(196, 242, 250);
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+header .navbar li a:hover {
+    border-bottom: 5px solid rgb(5, 228, 235);
+    padding: 2px;
+}
+
+body {
+    background-image: url(../img/bgImageProyectos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 120px;
+}
+
+.contact-container {
+    background-color: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-header h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2);
+}
+
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-light);
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.success-message {
+    display: none;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid #10b981;
+    color: #34d399;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <a href="../index.html" class="logo">Alejandro Contreras</a>
+    <ul class="navbar">
+        <li><a href="../index.html">Quién soy</a></li>
+        <li><a href="../htmls/cv.html">CV</a></li>
+        <li><a href="../htmls/proyectos.html">Proyectos destacados</a></li>
+        <li><a href="../htmls/formulario.html">Contáctame</a></li>
+    </ul>
+  </header>
+<body>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h2>Charlemos</h2>
+            <p>¿Quieres contactarme por un proyecto?</p>
+        </div>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Tema</label>
+                <input type="text" id="subject" name="subject" placeholder="¿En qué puedo ayudarte?">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar Mensaje</button>
+        </form>
+
+        <div id="statusMessage" class="success-message">
+            ¡Gracias! Tu mensaje ha sido enviado correctamente.
+        </div>
+    </div>
+</body>
+</html>
